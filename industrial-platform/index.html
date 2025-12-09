@@ -7,6 +7,24 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <nav class="global-nav">
+    <div class="logo">
+      <span>ChainFusion</span>
+      <small>Industrial Intelligence</small>
+    </div>
+    <ul>
+      <li><a href="#integrations">数据接入</a></li>
+      <li><a href="#data-resource">数据资源</a></li>
+      <li><a href="#ecosystem">行业协同</a></li>
+      <li><a href="#architecture">架构</a></li>
+      <li><a href="#analysis">分析洞察</a></li>
+      <li><a href="#alerts">预警中心</a></li>
+      <li><a href="#cases">场景案例</a></li>
+      <li><a href="#deployment">部署</a></li>
+      <li><a href="#lifecycle">生命周期</a></li>
+    </ul>
+    <a class="btn ghost" href="#contact">预约演示</a>
+  </nav>
   <header class="hero">
     <div class="hero-content">
       <p class="eyebrow">工业互联网 · 数据底座</p>
@@ -116,6 +134,22 @@
       </div>
     </section>
 
+    <section id="ecosystem" class="section">
+      <p class="eyebrow">行业协同生态</p>
+      <h2>服务行业、数据资源与应用工具的协同矩阵</h2>
+      <p>从园区政务到龙头制造、物流与金融机构，平台通过统一的数据接口和服务模板，帮助多角色主体实现数据协同与业务联动。</p>
+      <div class="ecosystem-grid" id="ecosystemGrid"></div>
+      <div class="ecosystem-panel">
+        <div>
+          <h3>重点行业关注要点</h3>
+          <div class="chip-row" id="ecosystemFilters"></div>
+        </div>
+        <div class="ecosystem-summary" id="ecosystemSummary">
+          <p>选择关注行业查看协同指引。</p>
+        </div>
+      </div>
+    </section>
+
     <section id="architecture" class="section">
       <p class="eyebrow">整体架构</p>
       <h2>五层架构覆盖服务行业到基础设施</h2>
@@ -141,6 +175,38 @@
       </div>
     </section>
 
+    <section id="alerts" class="section section-alt">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">供应链预警中心</p>
+          <h2>实时掌握风险事件与价格波动</h2>
+          <p>聚合自动触发的风险事件、价格异常和运行告警，支持按严重级别与行业过滤，并输出处置建议。</p>
+        </div>
+        <label class="heading-actions">
+          <span>严重级别</span>
+          <select id="alertFilter">
+            <option value="all">全部</option>
+            <option value="high">高</option>
+            <option value="medium">中</option>
+            <option value="low">低</option>
+          </select>
+        </label>
+      </div>
+      <div class="alerts-layout">
+        <div class="alerts-table" id="alertsTable"></div>
+        <aside class="alert-insights" id="alertInsights">
+          <p>选择事件查看建议。</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="cases" class="section">
+      <p class="eyebrow">场景案例</p>
+      <h2>多角色工业应用交付案例</h2>
+      <p>从供需协同到价格联动、金融风控和政策评估，平台提供可复制的模板与个性化扩展能力。</p>
+      <div class="case-grid" id="caseGrid"></div>
+    </section>
+
     <section id="deployment" class="section">
       <p class="eyebrow">部署与角色化应用</p>
       <h2>支持本地与云端，面向多角色工业应用</h2>
@@ -163,6 +229,43 @@
         </article>
       </div>
       <div class="role-grid" id="roleGrid"></div>
+    </section>
+
+    <section id="lifecycle" class="section section-alt">
+      <p class="eyebrow">系统生命周期</p>
+      <h2>覆盖设计、开发、测试到多环境部署</h2>
+      <div class="lifecycle-grid" id="lifecycleGrid"></div>
+      <div class="roadmap" id="roadmap"></div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <p class="eyebrow">预约与合作</p>
+      <h2>携手构建产业链数据底座</h2>
+      <div class="contact-grid">
+        <div>
+          <p>我们提供需求梳理、底层方案设计、PoC 验证到正式部署的一站式服务，支持本地化与云上混合交付，并可根据角色提供个性化培训。</p>
+          <ul>
+            <li>项目评估与集成蓝图共创</li>
+            <li>底层平台与定制应用并行实施</li>
+            <li>本地/云端双环境运维与安全托管</li>
+          </ul>
+        </div>
+        <form class="contact-form">
+          <label>
+            <span>联系人</span>
+            <input type="text" placeholder="姓名" />
+          </label>
+          <label>
+            <span>机构/企业</span>
+            <input type="text" placeholder="公司/园区/机构" />
+          </label>
+          <label>
+            <span>需求说明</span>
+            <textarea rows="4" placeholder="请描述当前产业链数据痛点、目标与时间计划"></textarea>
+          </label>
+          <button type="button" class="btn primary">提交意向</button>
+        </form>
+      </div>
     </section>
   </main>
 

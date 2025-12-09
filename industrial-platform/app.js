@@ -165,6 +165,156 @@ const chartDataset = [
   { month: "10", value: 92 },
 ];
 
+const ecosystemMatrix = [
+  {
+    name: "园区/政府服务",
+    focus: "项目调度与政策协同",
+    services: ["政策匹配", "重点项目跟踪", "产业热力"],
+  },
+  {
+    name: "龙头制造企业",
+    focus: "供应链韧性与产能监控",
+    services: ["供需平衡", "设备稼动", "异常追踪"],
+  },
+  {
+    name: "物流与仓储",
+    focus: "运力、库存与交付保障",
+    services: ["运力图谱", "库存预估", "订单跟踪"],
+  },
+  {
+    name: "金融与保险",
+    focus: "信用画像与风险评估",
+    services: ["授信评分", "风险敞口", "保理方案"],
+  },
+  {
+    name: "能源与原材料",
+    focus: "价格共振与供应预警",
+    services: ["价格预测", "资源调度", "预警推送"],
+  },
+];
+
+const ecosystemFocus = {
+  service:
+    "面向园区与服务行业，强调政策执行监测、项目协同以及预警联动，帮助管理者掌握链上运行态势。",
+  manufacturing:
+    "聚焦生产、订单与设备运行数据，实现跨工厂产能可视化、缺料预警与价格联动分析。",
+  logistics:
+    "以物流与供应链为核心，提供运力匹配、交付状态以及供应保障数据，支持多节点协同。",
+  finance:
+    "赋能金融与保险机构，结合企业画像、宏观与实时运行数据打造多维风控模型。",
+};
+
+const alertEvents = [
+  {
+    severity: "high",
+    title: "上游铜材价格 48 小时内上涨 7.2%",
+    impact: "影响新能源线束企业成本和交付周期",
+    signal: "期货与现货价差同时扩大",
+    action: [
+      "触发价格联动指数重新计算",
+      "向重点企业推送采购策略",
+      "建议金融机构调整授信额度",
+    ],
+  },
+  {
+    severity: "medium",
+    title: "华东某港口集装箱滞留 2800 TEU",
+    impact: "区域出口订单交付预计延迟 3-5 天",
+    signal: "物流 IoT 设备反馈滞留",
+    action: [
+      "协同物流伙伴重安排舱位",
+      "同步订单系统更新承诺交期",
+    ],
+  },
+  {
+    severity: "low",
+    title: "园区新增政策补贴窗口开启",
+    impact: "企业可申请数字化改造补贴",
+    signal: "政策资讯自动聚合",
+    action: ["推送政策匹配报告", "生成申报材料清单"],
+  },
+  {
+    severity: "medium",
+    title: "关键供应商 OEE 连续三天低于 70%",
+    impact: "下游组装企业存在断供风险",
+    signal: "MES+SCADA 数据触发",
+    action: [
+      "安排现场巡检",
+      "建议启动备用供应商对接",
+      "记录风险筹码进入协同工单",
+    ],
+  },
+];
+
+const caseStudies = [
+  {
+    name: "政策执行与产业画像指挥舱",
+    result: "实现 30+ 项政策与企业诉求双向匹配",
+    highlights: ["多源政策聚合", "企业画像评分", "项目调度台账"],
+  },
+  {
+    name: "新能源电池供应链预警平台",
+    result: "材料价格预警提前 15 天触发",
+    highlights: ["价格共振模型", "供需平衡沙盘", "跨企业协同工单"],
+  },
+  {
+    name: "跨园区物流与能耗协同",
+    result: "平均运力利用率提升 12%",
+    highlights: ["IoT 数据接入", "运力图谱", "边云调度"],
+  },
+  {
+    name: "产业金融联动风险控制",
+    result: "授信审批周期缩短 40%",
+    highlights: ["企业信用雷达", "应收账款监控", "智能风控评分"],
+  },
+];
+
+const lifecycleSteps = [
+  {
+    stage: "系统设计",
+    detail: "产业链梳理、数据模型定义、预警策略配置。",
+    toolkit: "价值流建模、数据资产蓝图、零代码指标工厂。",
+  },
+  {
+    stage: "开发集成",
+    detail: "接入器配置、API/消息总线映射、定制组件开发。",
+    toolkit: "接入向导、SDK、API Gateway、可视化编排器。",
+  },
+  {
+    stage: "测试验证",
+    detail: "数据沙箱回放、性能压测、预警规则 A/B。",
+    toolkit: "合成数据引擎、指标对账、回归脚本库。",
+  },
+  {
+    stage: "部署运维",
+    detail: "本地/云端/混合部署，指标监控与安全审计。",
+    toolkit: "容器编排、自动扩缩容、角色权限中心。",
+  },
+];
+
+const roadmapMilestones = [
+  {
+    quarter: "Q1",
+    focus: "基础数据接入",
+    items: ["打通关键生产/订单/价格接口", "完成政策与企业画像聚合"],
+  },
+  {
+    quarter: "Q2",
+    focus: "治理与指标",
+    items: ["指标工厂上线", "预警模型迭代", "统一标签体系"],
+  },
+  {
+    quarter: "Q3",
+    focus: "场景化应用",
+    items: ["交付协同驾驶舱", "上线金融风控接口", "部署移动端"],
+  },
+  {
+    quarter: "Q4",
+    focus: "生态共建",
+    items: ["开放 API 市场", "建设生态伙伴应用", "扩展跨区域节点"],
+  },
+];
+
 const connectorContainer = document.getElementById("connectorCards");
 const resourceList = document.getElementById("resourceList");
 const resourceDetail = document.getElementById("resourceDetail");
@@ -173,6 +323,15 @@ const roleGrid = document.getElementById("roleGrid");
 const analysisStatsList = document.getElementById("analysisStats");
 const industryFilter = document.getElementById("industryFilter");
 const priceChart = document.getElementById("priceChart");
+const ecosystemGrid = document.getElementById("ecosystemGrid");
+const ecosystemFilters = document.getElementById("ecosystemFilters");
+const ecosystemSummary = document.getElementById("ecosystemSummary");
+const alertsTable = document.getElementById("alertsTable");
+const alertInsights = document.getElementById("alertInsights");
+const alertFilter = document.getElementById("alertFilter");
+const caseGrid = document.getElementById("caseGrid");
+const lifecycleGrid = document.getElementById("lifecycleGrid");
+const roadmap = document.getElementById("roadmap");
 
 function renderConnectors(filter = "all") {
   connectorContainer.innerHTML = "";
@@ -258,6 +417,164 @@ function renderRoles() {
 function renderAnalysisStats() {
   analysisStatsList.innerHTML = analysisStats
     .map((stat) => `<li><span>${stat.label}</span><span>${stat.value}</span></li>`)
+    .join("");
+}
+
+function renderEcosystem() {
+  ecosystemGrid.innerHTML = ecosystemMatrix
+    .map(
+      (entry) => `
+      <article class="ecosystem-card">
+        <strong>${entry.name}</strong>
+        <p>${entry.focus}</p>
+        <ul>${entry.services.map((s) => `<li>${s}</li>`).join("")}</ul>
+      </article>
+    `
+    )
+    .join("");
+
+  const filterConfig = [
+    { key: "service", label: "服务行业" },
+    { key: "manufacturing", label: "制造业" },
+    { key: "logistics", label: "物流供应链" },
+    { key: "finance", label: "金融机构" },
+  ];
+
+  ecosystemFilters.innerHTML = filterConfig
+    .map(
+      (filter, index) =>
+        `<button type="button" class="chip${index === 0 ? " active" : ""}" data-key="${filter.key}">${filter.label}</button>`
+    )
+    .join("");
+
+  ecosystemFilters
+    .querySelectorAll(".chip")
+    .forEach((chip) =>
+      chip.addEventListener("click", () => {
+        ecosystemFilters
+          .querySelectorAll(".chip")
+          .forEach((node) => node.classList.remove("active"));
+        chip.classList.add("active");
+        updateEcosystemSummary(chip.dataset.key);
+      })
+    );
+
+  updateEcosystemSummary(filterConfig[0].key);
+}
+
+function updateEcosystemSummary(key) {
+  ecosystemSummary.innerHTML = `
+    <h3>协同指引</h3>
+    <p>${ecosystemFocus[key]}</p>
+    <p>结合角色化仪表板、供需沙盘与政策/价格数据，平台支持跨层级协同和个性化开发。</p>
+  `;
+}
+
+function renderAlerts(filter = "all") {
+  const filtered = alertEvents.filter((event) =>
+    filter === "all" ? true : event.severity === filter
+  );
+
+  if (!filtered.length) {
+    alertsTable.innerHTML =
+      "<p style=\"padding:1.5rem;\">当前过滤条件暂无事件。</p>";
+    alertInsights.innerHTML = "<p>选择事件后显示处置建议。</p>";
+    return;
+  }
+
+  const table = document.createElement("table");
+  table.innerHTML = `
+    <thead>
+      <tr>
+        <th>事件</th>
+        <th>影响</th>
+        <th>信号</th>
+        <th>级别</th>
+      </tr>
+    </thead>
+    <tbody>
+      ${filtered
+        .map(
+          (event, index) => `
+        <tr data-index="${index}">
+          <td>${event.title}</td>
+          <td>${event.impact}</td>
+          <td>${event.signal}</td>
+          <td><span class="badge-level ${event.severity}">${event.severity}</span></td>
+        </tr>
+      `
+        )
+        .join("")}
+    </tbody>
+  `;
+
+  alertsTable.innerHTML = "";
+  alertsTable.appendChild(table);
+
+  table.querySelectorAll("tbody tr").forEach((row, rowIndex) => {
+    row.addEventListener("click", () => {
+      updateAlertInsights(filtered[rowIndex]);
+    });
+  });
+  updateAlertInsights(filtered[0]);
+}
+
+function updateAlertInsights(event) {
+  if (!event) {
+    alertInsights.innerHTML = "<p>选择事件后显示处置建议。</p>";
+    return;
+  }
+  alertInsights.innerHTML = `
+    <h3>${event.title}</h3>
+    <p>${event.impact}</p>
+    <p><strong>触发信号：</strong>${event.signal}</p>
+    <ul>
+      ${event.action.map((a) => `<li>${a}</li>`).join("")}
+    </ul>
+  `;
+}
+
+function renderCases() {
+  caseGrid.innerHTML = caseStudies
+    .map(
+      (item) => `
+      <article class="case-card">
+        <h3>${item.name}</h3>
+        <p><strong>结果：</strong>${item.result}</p>
+        <ul>${item.highlights.map((h) => `<li>${h}</li>`).join("")}</ul>
+      </article>
+    `
+    )
+    .join("");
+}
+
+function renderLifecycle() {
+  lifecycleGrid.innerHTML = lifecycleSteps
+    .map(
+      (step) => `
+      <article class="lifecycle-step">
+        <h3>${step.stage}</h3>
+        <p>${step.detail}</p>
+        <p><strong>工具：</strong>${step.toolkit}</p>
+      </article>
+    `
+    )
+    .join("");
+
+  roadmap.innerHTML = roadmapMilestones
+    .map(
+      (item) => `
+      <div class="roadmap-item">
+        <div>
+          <strong>${item.quarter}</strong>
+          <p>${item.focus}</p>
+        </div>
+        <ul>
+          ${item.items.map((entry) => `<li>${entry}</li>`).join("")}
+        </ul>
+      </div>
+    `
+    )
     .join("");
 }
 
@@ -347,6 +664,12 @@ industryFilter.addEventListener("change", (event) => {
   renderConnectors(event.target.value);
 });
 
+if (alertFilter) {
+  alertFilter.addEventListener("change", (event) => {
+    renderAlerts(event.target.value);
+  });
+}
+
 document.getElementById("exportPlan").addEventListener("click", downloadPlan);
 document.getElementById("runSimulation").addEventListener("click", runSimulation);
 document.getElementById("refreshMetrics").addEventListener("click", refreshMetrics);
@@ -357,3 +680,7 @@ renderArchitecture();
 renderRoles();
 renderAnalysisStats();
 drawPriceChart(chartDataset);
+renderEcosystem();
+renderAlerts();
+renderCases();
+renderLifecycle();
