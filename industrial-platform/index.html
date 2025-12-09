@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>产业链数据集成与供应链预警平台</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">工业互联网 · 数据底座</p>
+      <h1>面向底层产业链的数据集成与协同应用平台</h1>
+      <p>连接多源异构数据、沉淀统一标准资源、支撑角色化工业应用与供应链预警，帮助企业实现从数据接入、治理到场景化交付的全流程闭环。</p>
+      <div class="hero-actions">
+        <a href="#integrations" class="btn primary">查看集成模块</a>
+        <a href="#architecture" class="btn ghost">了解整体架构</a>
+      </div>
+      <dl class="hero-metrics">
+        <div>
+          <dt>12+</dt>
+          <dd>行业服务场景</dd>
+        </div>
+        <div>
+          <dt>48</dt>
+          <dd>数据接入接口</dd>
+        </div>
+        <div>
+          <dt>7×24</dt>
+          <dd>多环境部署</dd>
+        </div>
+      </dl>
+    </div>
+    <div class="hero-panel">
+      <h3>数据接入总览</h3>
+      <div class="hero-panel__chart">
+        <div class="radial" role="presentation">
+          <span>93%</span>
+          <p>数据准备度</p>
+        </div>
+        <ul>
+          <li><span class="dot policy"></span>政策新闻数据</li>
+          <li><span class="dot finance"></span>财经与价格数据</li>
+          <li><span class="dot production"></span>生产运行数据</li>
+          <li><span class="dot supply"></span>供需与订单数据</li>
+        </ul>
+      </div>
+      <p class="hero-panel__note">兼容 REST、MQTT、OPC-UA、SFTP、消息总线等多种数据通道，自动匹配数据治理模版并生成标准 API。</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="integrations" class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">集成模块与接口</p>
+          <h2>多源异构数据快速接入</h2>
+          <p>针对政策、宏观、企业画像、供需、生产、订单、实时运行等数据源提供可配置的接入器与治理模版，解决多源数据对接成本高的问题。</p>
+        </div>
+        <div class="heading-actions">
+          <label>
+            <span>按行业过滤</span>
+            <select id="industryFilter">
+              <option value="all">全部</option>
+              <option value="service">服务行业</option>
+              <option value="manufacturing">制造业</option>
+              <option value="logistics">物流供应链</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div class="module-grid" id="connectorCards"></div>
+    </section>
+
+    <section id="pipeline" class="section">
+      <p class="eyebrow">数据治理流程</p>
+      <h2>从采集到预警的标准化流水线</h2>
+      <ol class="pipeline">
+        <li>
+          <h3>数据采集</h3>
+          <p>支持 API 轮询、流式推送、边缘节点直连及文件批量导入，多模态数据统一入口。</p>
+        </li>
+        <li>
+          <h3>标准化映射</h3>
+          <p>自动匹配字段词典与元数据版本，实现多粒度与多时间尺度指标统一。</p>
+        </li>
+        <li>
+          <h3>清洗校验</h3>
+          <p>内置缺失值、异常值、时序对齐、价格共识算法，保障数据可信。</p>
+        </li>
+        <li>
+          <h3>指标构建</h3>
+          <p>可视化配置 KPI、预警阈值、价格联动指数，为上层应用提供即取即用的数据。</p>
+        </li>
+        <li>
+          <h3>多端投递</h3>
+          <p>同步至协同门户、预警大屏、移动端及第三方业务系统。</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="data-resource" class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">数据资源层</p>
+          <h2>统一标准的数据资源与指标体系</h2>
+          <p>支持模型设计、内容建设、指标查询、加工清洗，覆盖工业互联网产业链供应链全量数据类型。</p>
+        </div>
+        <button class="btn ghost" id="exportPlan">导出接入计划</button>
+      </div>
+      <div class="resource-panel">
+        <aside class="resource-list" id="resourceList"></aside>
+        <div class="resource-detail" id="resourceDetail">
+          <p>选择左侧数据类型查看建模与指标方案。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="architecture" class="section">
+      <p class="eyebrow">整体架构</p>
+      <h2>五层架构覆盖服务行业到基础设施</h2>
+      <div class="architecture-grid" id="architectureGrid"></div>
+    </section>
+
+    <section id="analysis" class="section">
+      <p class="eyebrow">初步分析与价格共数据</p>
+      <h2>内置分析能力，为上层系统提供数据支撑</h2>
+      <div class="analysis-grid">
+        <div class="analysis-card">
+          <canvas id="priceChart" width="620" height="320" aria-label="价格共数据走势"></canvas>
+          <p class="chart-note">示例：关键原材料价格指数联动预测，支持自定义时间跨度与颗粒度。</p>
+        </div>
+        <div class="analysis-card" id="analysisSummary">
+          <h3>多维度分析输出</h3>
+          <ul class="analysis-stats" id="analysisStats"></ul>
+          <div class="analysis-actions">
+            <button class="btn primary" id="runSimulation">运行价格联动仿真</button>
+            <button class="btn ghost" id="refreshMetrics">刷新指标</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="deployment" class="section">
+      <p class="eyebrow">部署与角色化应用</p>
+      <h2>支持本地与云端，面向多角色工业应用</h2>
+      <div class="deployment-grid">
+        <article class="deploy-card">
+          <h3>本地/私有化部署</h3>
+          <ul>
+            <li>支持离线节点、边缘计算与内网隔离</li>
+            <li>容器化交付，兼容 x86/ARM 架构</li>
+            <li>提供数据沙箱与准入审批流程</li>
+          </ul>
+        </article>
+        <article class="deploy-card">
+          <h3>云服务器部署</h3>
+          <ul>
+            <li>自动弹性扩缩容与多租户隔离</li>
+            <li>统一身份与角色访问控制</li>
+            <li>一键启用 API 网关对外服务</li>
+          </ul>
+        </article>
+      </div>
+      <div class="role-grid" id="roleGrid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 产业链数据集成平台 · 提供系统底层设计、开发、测试、部署的一体化能力。</p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
